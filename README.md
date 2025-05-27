@@ -7,6 +7,7 @@
 
 RUN 
 
+
 ```bash
 
 python3 -m venv rwkv-env
@@ -14,7 +15,8 @@ source rwkv-env/bin/activate   # On Windows: rwkv-env\Scripts\activate
 
 pip install -r requirements2.txt
 
-'''
+```
+
 And the file to run is FineTuningRwKV.ipynb
 
 
