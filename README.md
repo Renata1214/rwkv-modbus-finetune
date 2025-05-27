@@ -5,6 +5,19 @@
 
 \[ English | [中文](README_zh.md) \]
 
+RUN 
+
+```bash
+
+python3 -m venv rwkv-env
+source rwkv-env/bin/activate   # On Windows: rwkv-env\Scripts\activate
+
+pip install -r requirements2.txt
+
+'''
+And the file to run is FineTuningRwKV.ipynb
+
+
 RWKV-PEFT is the official implementation for efficient parameter fine-tuning of RWKV models, supporting various advanced fine-tuning methods across multiple hardware platforms.
 
 # Recent updates
