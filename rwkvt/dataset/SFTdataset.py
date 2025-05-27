@@ -74,7 +74,25 @@ def sft_dataset(script_args):
     # logger.info("BOS Token", tokenizer.bos_token, tokenizer.bos_token_id)
     # logger.info("EOS Token", tokenizer.eos_token, tokenizer.eos_token_id)
 
-    raw_train_datasets = load_dataset(script_args.data_file, split=script_args.sft_split)
+
+    #CHANGES BY RENATA
+
+    # raw_train_datasets = load_dataset(script_args.data_file, split=script_args.sft_split)
+
+    from datasets import load_dataset
+
+    if script_args.data_file in ["json", "jsonl"]:
+        raw_train_datasets = load_dataset(
+            "json",
+            data_files=script_args.data_files,
+            split=script_args.sft_split
+        )
+    else:
+        raw_train_datasets = load_dataset(
+            script_args.data_file,
+            split=script_args.sft_split
+        )
+
 
     # if script_args.local_rank > 0: 
     #     torch.distributed.barrier()

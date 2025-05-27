@@ -26,6 +26,9 @@ if __name__ == "__main__":
     parser.add_argument("--random_seed", default="-1", type=int)
 
     parser.add_argument("--data_file", default="", type=str)
+    #CHANGES BY RENATA
+    parser.add_argument("--data_files", default=None, type=str, help="Path to local dataset file for 'json' or 'jsonl'")
+
     parser.add_argument("--data_type", default="utf-8", type=str) #binidx / sft
     parser.add_argument("--vocab_size", default=0, type=int)  # vocab_size = 0 means auto (for char-level LM and .txt data)
 
